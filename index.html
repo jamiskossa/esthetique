@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautéPro - Votre Beauté, Notre Passion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS Général */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(255,105,180,0.95), rgba(147,112,219,0.95));
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-container .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-container .nav-links a:hover {
+            color: #ff69b4;
+        }
+
+        /* Section Hero */
+        .hero {
+            background-image: url('images/hero.jpg'); /* Remplacez par l'image de votre choix */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            padding: 12px 24px;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            transform: scale(1.05);
+        }
+
+        /* Section Services */
+.services {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(135deg, #ff66b2, #ff99cc);
+}
+
+.services h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+/* Grid layout pour les services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+/* Style des cartes de service */
+.service-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Style de l'image de service */
+.service-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+/* Style du titre de service */
+.service-card h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+/* Style du texte de description */
+.service-card p {
+    color: #555;
+    font-size: 1em;
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+    .services h2 {
+        font-size: 1.8em;
+    }
+    .service-card h3 {
+        font-size: 1.2em;
+    }
+    .service-card p {
+        font-size: 0.9em;
+    }
+}
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            color: #ff69b4;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .social-links a {
+            color: #ff69b4;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff1493;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section Tarifs */
+.tarifs {
+    padding: 3em 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.tarifs h2 {
+    font-size: 2.5em;
+    color: #ff66b2;
+    margin-bottom: 1em;
+}
+
+.tarifs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+/* Style pour chaque carte tarifaire */
+.tarif-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.tarif-card:hover {
+    transform: translateY(-5px);
+}
+
+.tarif-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.tarif-price {
+    font-size: 2em;
+    color: #ff66b2;
+    margin: 0.5em 0;
+}
+
+.tarif-duration {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.tarif-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarif-features li {
+    font-size: 1em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tarif-button {
+    margin-top: 1em;
+    background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.tarif-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tarifs h2 {
+        font-size: 2em;
+    }
+    .tarif-card {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.copy {
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.webp" alt="BeautéPro Logo">
+        </div>
+        <nav class="nav-container">
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Votre Beauté, Notre Passion</h1>
+            <p>Des soins esthétiques professionnels pour révéler votre beauté naturelle</p>
+            <button class="cta-button" onclick="window.location.href='rendez_vous.html'">Prendre Rendez-vous</button>
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/soin.jpg" alt="Soins du Visage" class="service-image">
+                <h3>Soins du Visage</h3>
+                <p>Traitements personnalisés pour une peau rayonnante</p>
+            </div>
+            <div class="service-card">
+                <img src="images/peau.jpg" alt="Modelage Corps" class="service-image">
+                <h3>Modelage Corps</h3>
+                <p>Relaxation et bien-être pour votre corps</p>
+            </div>
+            <div class="service-card">
+                <img src="images/epil.jpg" alt="Épilation" class="service-image">
+                <h3>Épilation</h3>
+                <p>Techniques modernes et résultats durables</p>
+            </div>
+            <div class="service-card">
+                <img src="images/maqui.jpg" alt="Maquillage" class="service-image">
+                <h3>Maquillage</h3>
+                <p>Pour toutes vos occasions spéciales</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tarifs" id="tarifs">
+        <h2>Nos Tarifs</h2>
+        <div class="tarifs-grid">
+            <div class="tarif-card">
+                <h3>Découverte</h3>
+                <div class="tarif-price">49€</div>
+                <div class="tarif-duration">60 minutes</div>
+                <ul class="tarif-features">
+                    <li>Soin du visage basique</li>
+                    <li>Nettoyage en profondeur</li>
+                    <li>Masque hydratant</li>
+                    <li>Massage relaxant 15min</li>
+                </ul>
+                <button class="cta-button" onclick="window.location.href='rendez_vous.html'">Prendre Rendez-vous</button>
+            </div>
+
+            <div class="tarif-card">
+                <h3>Premium</h3>
+                <div class="tarif-price">89€</div>
+                <div class="tarif-duration">90 minutes</div>
+                <ul class="tarif-features">
+                    <li>Soin du visage complet</li>
+                    <li>Peeling aux acides de fruits</li>
+                    <li>Masque personnalisé</li>
+                    <li>Massage relaxant 30min</li>
+                </ul>
+                <button class="cta-button" onclick="window.location.href='rendez_vous.html'">Prendre Rendez-vous</button>
+            </div>
+
+            <div class="tarif-card">
+                <h3>Luxe</h3>
+                <div class="tarif-price">129€</div>
+                <div class="tarif-duration">120 minutes</div>
+                <ul class="tarif-features">
+                    <li>Soin du visage premium</li>
+                    <li>Traitement anti-âge</li>
+                    <li>Double masque</li>
+                    <li>Massage relaxant 45min</li>
+                </ul>
+                <button class="cta-button" onclick="window.location.href='rendez_vous.html'">Prendre Rendez-vous</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>BeautéPro</h3>
+                <p>10 rue de la Beauté<br>75013 Paris<br>Tel: 01 23 45 67 89</p>
+            </div>
+            <div>
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Horaires</h3>
+                <p>Lundi - Samedi: 9h - 19h<br>Dimanche: Fermé</p>
+            </div>
+        </div>
+
+        <p class="copy">&copy; BeautéPro 2024 par Yattara Ousmane</p>
+    </footer>
+
+</body>
+</html>
